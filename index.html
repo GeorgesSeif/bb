@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NDU Blackboard - Login to access your courses and academic resources.">
+    <title>Blackboard Learn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="loginBox">
+        <div id="loginContainer">
+            <div id="loginLogo">
+                <img src="image (4).png" alt="NDU - Gaudium De Veritate" id="ndu-logo">
+            </div>
+
+            <form id="login" action="/submit-form" method="post" class="login-form">
+                <ul class="login-fields">
+                    <li>
+                        <label for="user_id">Username</label>
+                        <input type="text" id="user_id" name="user_id" autocomplete="username" tabindex="1">
+                    </li>
+                    <li>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" autocomplete="current-password"
+                            tabindex="2">
+                    </li>
+                    <li class="submit-row">
+                        <input class="button expand" id="entry-login" type="submit" value="Sign In" tabindex="3">
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <footer id="loginFooter">
+            <p>&copy; 1997-2026 Blackboard Inc. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Form connects to the Python backend via the action="/submit-form" method="post"
+        // in the form tag above. When "Sign In" is clicked, it sends a POST request
+        // with the user_id and password to the Flask server.
+    </script>
+</body>
+
+</html>
